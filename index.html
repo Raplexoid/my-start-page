@@ -15,6 +15,7 @@
             background-color: #050505;
             background-image: radial-gradient(circle at center, #121217 0%, #050505 100%);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow: hidden;
         }
 
         .grid-container {
@@ -36,23 +37,23 @@
 
         .app-item:active {
             transform: scale(0.9);
+            opacity: 0.8;
         }
 
         .icon-box {
-            width: 75px;
+            width: 75px; /* Размер, который мы обсуждали */
             height: 75px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: rgba(255, 255, 255, 0.03); /* Едва заметный фон на случай сбоя */
-            border-radius: 18px;
+            overflow: hidden;
+            border-radius: 18px; /* Скругление как у приложений */
         }
 
         .app-item img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            border-radius: 15px;
+            object-fit: cover;
         }
 
         .app-item span {
@@ -67,7 +68,7 @@
 
 <div class="grid-container">
     <a href="yandexnavi://" class="app-item">
-        <div class="icon-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Yandex_Navigator_icon.png/512px-Yandex_Navigator_icon.png" alt="Navi"></div>
+        <div class="icon-box"><img src="https://im5.pandahelp.vip/panda/201902/06205f39-d.jpg" alt="Navi"></div>
         <span>Навигатор</span>
     </a>
 
@@ -77,7 +78,7 @@
     </a>
 
     <a href="wildberries://" class="app-item">
-        <div class="icon-box"><img src="https://static-basket-01.wbbasket.ru/vol0/basket/it-site/apple-touch-icon-180x180.png" alt="WB"></div>
+        <div class="icon-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Wildberries_logo.png/512px-Wildberries_logo.png" alt="WB"></div>
         <span>Wildberries</span>
     </a>
 
@@ -92,7 +93,7 @@
     </a>
 
     <a href="dgis://" class="app-item">
-        <div class="icon-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/2GIS_logo.svg/512px-2GIS_logo.svg.png" alt="2GIS"></div>
+        <div class="icon-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/2GIS_logo_2020.png/512px-2GIS_logo_2020.png" alt="2GIS"></div>
         <span>2GIS</span>
     </a>
 </div>
