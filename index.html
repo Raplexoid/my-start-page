@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Домашняя Страница</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1a1a2e; /* Запасной темный цвет */
+            background-image: url('https://i.imgur.com/your_chosen_background_image.jpg'); /* ЗАМЕНИТЕ НА ВАШ ФОН */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            overflow: hidden; /* Чтобы не было скролла */
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+            gap: 20px; /* Отступы между иконками */
+            max-width: 600px; /* Максимальная ширина сетки */
+            padding: 20px;
+            box-sizing: border-box;
+            justify-items: center; /* Центрирование элементов в сетке */
+        }
+        .icon-item {
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon-item img {
+            width: 80px; /* Размер иконки */
+            height: 80px;
+            border-radius: 20px; /* Скругление углов */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Мягкая тень */
+            transition: transform 0.2s ease-in-out;
+        }
+        .icon-item img:active {
+            transform: scale(0.95); /* Эффект нажатия */
+        }
+        .icon-item span {
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Адаптация для маленьких экранов (телефонов) */
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr); /* На телефонах тоже 3 в ряд */
+                gap: 15px;
+            }
+            .icon-item img {
+                width: 70px; /* Чуть меньше иконки на мобильных */
+                height: 70px;
+            }
+            .icon-item span {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="tg://resolve" class="icon-item">
+            <img src="https://i.imgur.com/QhS6L1c.png" alt="Telegram">
+            <span>Telegram</span>
+        </a>
+        
+        <a href="yandexnavi://" class="icon-item">
+            <img src="https://i.imgur.com/6S30pPz.png" alt="Яндекс.Навигатор">
+            <span>Навигатор</span>
+        </a>
+
+        <a href="wildberries://" class="icon-item">
+            <img src="https://i.imgur.com/k6lP0Wn.png" alt="Wildberries">
+            <span>Wildberries</span>
+        </a>
+
+        <a href="ozon://" class="icon-item">
+            <img src="https://i.imgur.com/7bY8M6B.png" alt="Ozon">
+            <span>Ozon</span>
+        </a>
+
+        <a href="yandexmusic://" class="icon-item">
+            <img src="https://i.imgur.com/u01P3hR.png" alt="Яндекс.Музыка">
+            <span>Музыка</span>
+        </a>
+        
+        <a href="dgis://" class="icon-item">
+            <img src="https://i.imgur.com/W2A8vR1.png" alt="2GIS">
+            <span>2GIS</span>
+        </a>
+    </div>
+</body>
+</html>
