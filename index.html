@@ -12,18 +12,17 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            /* Глубокий черный фон */
-            background-color: #050505;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0a0a0b; /* Очень темный фон */
+            font-family: -apple-system, system-ui, sans-serif;
         }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            padding: 20px;
             width: 100%;
             max-width: 360px;
+            padding: 20px;
         }
 
         .app-item {
@@ -35,30 +34,31 @@
         }
 
         .app-item:active {
-            transform: scale(0.92);
-            opacity: 0.8;
+            transform: scale(0.9);
         }
 
         .icon-box {
-            width: 70px;
-            height: 70px;
+            width: 72px;
+            height: 72px;
+            background: #1a1a1c; /* Темная подложка, если иконка прозрачная */
+            border-radius: 18px;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .app-item img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            /* Закругляем углы для тех иконок, которые квадратные */
-            border-radius: 16px;
+            object-fit: cover;
         }
 
         .app-item span {
             margin-top: 10px;
             font-size: 11px;
-            color: #777;
+            color: #666;
             font-weight: 400;
         }
     </style>
@@ -67,32 +67,32 @@
 
 <div class="grid-container">
     <a href="yandexnavi://" class="app-item">
-        <div class="icon-box"><img src="https://yastatic.net/s3/home/services/block/yandex_navi_new.png" alt="Navi"></div>
+        <div class="icon-box"><img src="https://api.dicebear.com/7.x/initials/svg?seed=YN&backgroundColor=ffcc00" alt="Navi"></div>
         <span>Навигатор</span>
     </a>
 
     <a href="tg://resolve" class="app-item">
-        <div class="icon-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="TG"></div>
+        <div class="icon-box"><img src="https://cdn.pixabay.com/photo/2017/10/04/18/16/telegram-2817120_1280.png" alt="TG"></div>
         <span>Telegram</span>
     </a>
 
     <a href="wildberries://" class="app-item">
-        <div class="icon-box"><img src="https://static-basket-01.wbbasket.ru/vol0/basket/it-site/apple-touch-icon-180x180.png" alt="WB"></div>
+        <div class="icon-box"><img src="https://api.dicebear.com/7.x/initials/svg?seed=WB&backgroundColor=481173" alt="WB"></div>
         <span>Wildberries</span>
     </a>
 
     <a href="ozon://" class="app-item">
-        <div class="icon-box"><img src="https://cdn1.ozone.ru/graphics/ozon-landing/favicon.ico" alt="Ozon"></div>
+        <div class="icon-box"><img src="https://api.dicebear.com/7.x/initials/svg?seed=OZ&backgroundColor=005bff" alt="Ozon"></div>
         <span>Ozon</span>
     </a>
 
     <a href="yandexmusic://" class="app-item">
-        <div class="icon-box"><img src="https://yastatic.net/s3/home/services/block/music_new.png" alt="Music"></div>
+        <div class="icon-box"><img src="https://api.dicebear.com/7.x/initials/svg?seed=YM&backgroundColor=ff3333" alt="Music"></div>
         <span>Музыка</span>
     </a>
 
     <a href="dgis://" class="app-item">
-        <div class="icon-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/2GIS_logo.svg/512px-2GIS_logo.svg.png" alt="2GIS"></div>
+        <div class="icon-box"><img src="https://api.dicebear.com/7.x/initials/svg?seed=2G&backgroundColor=24c250" alt="2GIS"></div>
         <span>2GIS</span>
     </a>
 </div>
