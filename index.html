@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Launcher</title>
+    <title>Dark Launcher</title>
     <style>
         body {
             margin: 0;
@@ -12,19 +12,20 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            /* Темный абстрактный фон из той же коллекции */
-            background: #000000 url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-63452.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: -apple-system, system-ui, sans-serif;
+            /* Глубокий темный фон без лишнего света */
+            background-color: #08080a;
+            background-image: radial-gradient(circle at center, #111115 0%, #050505 100%);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: white;
         }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 35px;
             padding: 20px;
-            width: 90%;
-            max-width: 400px;
+            width: 100%;
+            max-width: 380px;
         }
 
         .app-item {
@@ -32,40 +33,37 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            outline: none;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .icon-wrapper {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.05); /* Легкая подложка */
-            border-radius: 22px;
+        .app-item:active {
+            transform: scale(0.9);
+            opacity: 0.7;
+        }
+
+        .icon-box {
+            width: 75px;
+            height: 75px;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-            transition: transform 0.1s;
-        }
-
-        .app-item:active .icon-wrapper {
-            transform: scale(0.9);
-            background: rgba(255, 255, 255, 0.1);
+            transition: transform 0.1s ease;
         }
 
         .app-item img {
-            width: 65%; /* Иконки будут внутри подложки */
-            height: 65%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
+            /* Легкое свечение для иконок на черном фоне */
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.5));
         }
 
         .app-item span {
-            margin-top: 12px;
-            color: #ffffff;
+            margin-top: 10px;
             font-size: 11px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            color: #888; /* Приглушенный текст для истинно темной темы */
             font-weight: 400;
-            opacity: 0.9;
+            text-transform: none;
         }
     </style>
 </head>
@@ -73,32 +71,32 @@
 
 <div class="grid-container">
     <a href="yandexnavi://" class="app-item">
-        <div class="icon-wrapper"><img src="https://img.icons8.com/color/512/yandex-navigator.png"></div>
+        <div class="icon-box"><img src="https://cdn-icons-png.flaticon.com/512/10074/10074550.png" alt="Navi"></div>
         <span>Навигатор</span>
     </a>
 
     <a href="tg://resolve" class="app-item">
-        <div class="icon-wrapper"><img src="https://img.icons8.com/color/512/telegram-app.png"></div>
+        <div class="icon-box"><img src="https://img.icons8.com/color/512/telegram-app.png" alt="TG"></div>
         <span>Telegram</span>
     </a>
 
     <a href="wildberries://" class="app-item">
-        <div class="icon-wrapper"><img src="https://img.icons8.com/color/512/shopping-cart.png"></div>
+        <div class="icon-box"><img src="https://img.icons8.com/color/512/shopping-cart.png" alt="WB"></div>
         <span>Wildberries</span>
     </a>
 
     <a href="ozon://" class="app-item">
-        <div class="icon-wrapper"><img src="https://img.icons8.com/color/512/shopping-bag.png"></div>
+        <div class="icon-box"><img src="https://img.icons8.com/color/512/shopping-bag.png" alt="Ozon"></div>
         <span>Ozon</span>
     </a>
 
     <a href="yandexmusic://" class="app-item">
-        <div class="icon-wrapper"><img src="https://img.icons8.com/color/512/yandex-music.png"></div>
+        <div class="icon-box"><img src="https://img.icons8.com/color/512/yandex-music.png" alt="Music"></div>
         <span>Музыка</span>
     </a>
 
     <a href="dgis://" class="app-item">
-        <div class="icon-wrapper"><img src="https://img.icons8.com/color/512/map-marker.png"></div>
+        <div class="icon-box"><img src="https://img.icons8.com/color/512/map-marker.png" alt="2GIS"></div>
         <span>2GIS</span>
     </a>
 </div>
