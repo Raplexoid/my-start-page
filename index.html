@@ -12,18 +12,23 @@
             justify-content: center;
             align-items: flex-start; 
             min-height: 100vh;
+            
+            /* Настройка фонового изображения */
             background-color: #050505;
-            background-image: radial-gradient(circle at center, #121217 0%, #050505 100%);
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Abstract+Geometric+Waves+UI+UX+Background+JPG.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            /* Отступ всей сетки от верха экрана */
-            padding-top: 37px; 
+            padding-top: 75px; 
             box-sizing: border-box;
         }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            /* Первое число - отступ между рядами (37px), второе - между колонками (75px) */
             gap: 37px 75px; 
             padding: 20px;
             width: 100%;
@@ -51,6 +56,8 @@
             align-items: center;
             overflow: hidden;
             border-radius: 20px;
+            /* Легкое свечение, чтобы иконка выделялась на фоне */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
         }
 
         .app-item img {
@@ -63,10 +70,12 @@
         .app-item span {
             margin-top: 10px;
             font-size: 11px;
-            color: #888;
-            font-weight: 400;
+            /* Сделал текст чуть светлее для лучшей читаемости на фоне картинки */
+            color: #ccc; 
+            font-weight: 500;
             text-align: center;
             width: 80px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
     </style>
 </head>
