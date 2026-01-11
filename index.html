@@ -12,10 +12,9 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #050505;
+            background-color: #050505; /* Глубокий черный фон */
             background-image: radial-gradient(circle at center, #121217 0%, #050505 100%);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            overflow: hidden;
         }
 
         .grid-container {
@@ -41,19 +40,21 @@
         }
 
         .icon-box {
-            width: 75px; /* Размер, который мы обсуждали */
+            width: 75px;
             height: 75px;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            border-radius: 18px; /* Скругление как у приложений */
+            border-radius: 20px; /* Скругление как у iPhone/Android */
+            background-color: transparent; /* Белый фон уберется визуально, если PNG прозрачный */
         }
 
         .app-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Заполняет квадрат, обрезая лишнее по краям */
+            border-radius: 20px;
         }
 
         .app-item span {
@@ -68,32 +69,32 @@
 
 <div class="grid-container">
     <a href="yandexnavi://" class="app-item">
-        <div class="icon-box"><img src="https://im5.pandahelp.vip/panda/201902/06205f39-d.jpg" alt="Navi"></div>
+        <div class="icon-box"><img src="yandex_navigator.png" alt="Navi"></div>
         <span>Навигатор</span>
     </a>
 
     <a href="tg://resolve" class="app-item">
-        <div class="icon-box"><img src="https://img.icons8.com/color/512/telegram-app.png" alt="TG"></div>
+        <div class="icon-box"><img src="telegram.png" alt="TG"></div>
         <span>Telegram</span>
     </a>
 
     <a href="wildberries://" class="app-item">
-        <div class="icon-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Wildberries_logo.png/512px-Wildberries_logo.png" alt="WB"></div>
+        <div class="icon-box"><img src="WB.png" alt="WB"></div>
         <span>Wildberries</span>
     </a>
 
     <a href="ozon://" class="app-item">
-        <div class="icon-box"><img src="https://img.icons8.com/color/512/ozon.png" alt="Ozon"></div>
+        <div class="icon-box"><img src="ozon.png" alt="Ozon"></div>
         <span>Ozon</span>
     </a>
 
     <a href="yandexmusic://" class="app-item">
-        <div class="icon-box"><img src="https://img.icons8.com/color/512/yandex-music.png" alt="Music"></div>
+        <div class="icon-box"><img src="Yandex music.png" alt="Music"></div>
         <span>Музыка</span>
     </a>
 
     <a href="dgis://" class="app-item">
-        <div class="icon-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/2GIS_logo_2020.png/512px-2GIS_logo_2020.png" alt="2GIS"></div>
+        <div class="icon-box"><img src="2GIS.png" alt="2GIS"></div>
         <span>2GIS</span>
     </a>
 </div>
