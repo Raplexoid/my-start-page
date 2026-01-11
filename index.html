@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Launcher</title>
+    <title>My Dashboard</title>
     <style>
         body {
             margin: 0;
@@ -12,17 +12,19 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #0a0a0b; /* Очень темный фон */
-            font-family: -apple-system, system-ui, sans-serif;
+            /* Возвращаем очень темный, стильный фон */
+            background-color: #050505;
+            background-image: radial-gradient(circle at center, #121217 0%, #050505 100%);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
+            padding: 20px;
             width: 100%;
             max-width: 360px;
-            padding: 20px;
         }
 
         .app-item {
@@ -31,6 +33,7 @@
             flex-direction: column;
             align-items: center;
             -webkit-tap-highlight-color: transparent;
+            transition: transform 0.1s ease;
         }
 
         .app-item:active {
@@ -38,27 +41,25 @@
         }
 
         .icon-box {
-            width: 72px;
-            height: 72px;
-            background: #1a1a1c; /* Темная подложка, если иконка прозрачная */
-            border-radius: 18px;
+            width: 75px;
+            height: 75px;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .app-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            /* Мягкое свечение, как в первом варианте */
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.1));
         }
 
         .app-item span {
             margin-top: 10px;
             font-size: 11px;
-            color: #666;
+            color: #999;
             font-weight: 400;
         }
     </style>
@@ -67,32 +68,32 @@
 
 <div class="grid-container">
     <a href="yandexnavi://" class="app-item">
-        <div class="icon-box"><img src="https://api.dicebear.com/7.x/initials/svg?seed=YN&backgroundColor=ffcc00" alt="Navi"></div>
+        <div class="icon-box"><img src="https://img.icons8.com/color/512/yandex-navigator.png" alt="Navi"></div>
         <span>Навигатор</span>
     </a>
 
     <a href="tg://resolve" class="app-item">
-        <div class="icon-box"><img src="https://cdn.pixabay.com/photo/2017/10/04/18/16/telegram-2817120_1280.png" alt="TG"></div>
+        <div class="icon-box"><img src="https://img.icons8.com/color/512/telegram-app.png" alt="TG"></div>
         <span>Telegram</span>
     </a>
 
     <a href="wildberries://" class="app-item">
-        <div class="icon-box"><img src="https://api.dicebear.com/7.x/initials/svg?seed=WB&backgroundColor=481173" alt="WB"></div>
+        <div class="icon-box"><img src="https://img.icons8.com/color/512/wildberries.png" alt="WB"></div>
         <span>Wildberries</span>
     </a>
 
     <a href="ozon://" class="app-item">
-        <div class="icon-box"><img src="https://api.dicebear.com/7.x/initials/svg?seed=OZ&backgroundColor=005bff" alt="Ozon"></div>
+        <div class="icon-box"><img src="https://img.icons8.com/color/512/ozon.png" alt="Ozon"></div>
         <span>Ozon</span>
     </a>
 
     <a href="yandexmusic://" class="app-item">
-        <div class="icon-box"><img src="https://api.dicebear.com/7.x/initials/svg?seed=YM&backgroundColor=ff3333" alt="Music"></div>
+        <div class="icon-box"><img src="https://img.icons8.com/color/512/yandex-music.png" alt="Music"></div>
         <span>Музыка</span>
     </a>
 
     <a href="dgis://" class="app-item">
-        <div class="icon-box"><img src="https://api.dicebear.com/7.x/initials/svg?seed=2G&backgroundColor=24c250" alt="2GIS"></div>
+        <div class="icon-box"><img src="https://img.icons8.com/color/512/2gis.png" alt="2GIS"></div>
         <span>2GIS</span>
     </a>
 </div>
