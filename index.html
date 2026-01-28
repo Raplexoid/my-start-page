@@ -25,9 +25,9 @@
 
         .grid-container {
             display: grid;
-            /* Сетка 5 колонок */
+            /* Сетка: 5 колонок */
             grid-template-columns: repeat(5, 1fr);
-            /* Отступы: 40px между строками, 10px между колонками */
+            /* Отступы */
             gap: 40px 10px; 
             padding: 10px;
             width: 100%;
@@ -48,6 +48,7 @@
         }
 
         .icon-box {
+            /* Размер 58px для 5 иконок в ряд */
             width: 58px;
             height: 58px;
             display: flex;
@@ -80,47 +81,47 @@
 <body>
 
 <div class="grid-container">
-    <a href="intent://www.tinkoff.ru/#Intent;scheme=https;package=com.idamob.tinkoff.android;end" class="app-item">
+    <a href="intent://#Intent;scheme=tinkoffbank;package=com.idamob.tinkoff.android;end" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="Tbank.png" style="border-radius: 18px;"></div>
         <span>Т-Банк</span>
     </a>
 
-    <a href="intent://yandex.ru/pogoda/#Intent;scheme=https;package=ru.yandex.weatherplugin;end" class="app-item">
+    <a href="yandexweather://" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="YandexWeather.png" style="border-radius: 18px;"></div>
         <span>Погода</span>
     </a>
 
-    <a href="intent://#Intent;scheme=yandexnavi;package=ru.yandex.yandexnavi;end" class="app-item">
+    <a href="yandexnavi://" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="yandex_navigator.png" style="border-radius: 18px;"></div>
         <span>Навигатор</span>
     </a>
 
-    <a href="intent://resolve?domain=telegram#Intent;scheme=tg;package=org.telegram.messenger;end" class="app-item">
+    <a href="tg://resolve" class="app-item">
         <div class="icon-box" style="border-radius: 50%;"><img src="telegram.png" style="border-radius: 50%;"></div>
         <span>Telegram</span>
     </a>
 
-    <a href="intent://www.wildberries.ru/#Intent;scheme=https;package=com.wildberries.ru;end" class="app-item">
+    <a href="wildberries://" class="app-item">
         <div class="icon-box" style="border-radius: 50%;"><img src="WB.png" style="border-radius: 50%;"></div>
         <span>WB</span>
     </a>
 
-    <a href="intent://www.ozon.ru/#Intent;scheme=https;package=ru.ozon.app.android;end" class="app-item">
+    <a href="ozon://" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="ozon.png" style="border-radius: 18px;"></div>
         <span>Ozon</span>
     </a>
 
-    <a href="intent://music.yandex.ru/#Intent;scheme=https;package=ru.yandex.music;end" class="app-item">
+    <a href="yandexmusic://" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="Yandex music.png" style="border-radius: 18px;"></div>
         <span>Музыка</span>
     </a>
 
-    <a href="intent://2gis.ru/#Intent;scheme=https;package=ru.dublgis.dgismobile;end" class="app-item">
+    <a href="dgis://" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="2GIS.png" style="border-radius: 18px;"></div>
         <span>2GIS</span>
     </a>
 
-    <a href="intent://movix.ru/#Intent;scheme=https;package=com.ertelecom.domru.tv;end" class="app-item">
+    <a href="intent://#Intent;scheme=movix;package=com.ertelecom.domru.tv;end" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="Movix.png" style="border-radius: 18px;"></div>
         <span>Movix</span>
     </a>
