@@ -10,7 +10,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Начинаем сверху, отступ задаем padding-top */
+            align-items: flex-start;
             min-height: 100vh;
             background-color: #050505;
             background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Abstract+Geometric+Waves+UI+UX+Background+JPG.jpg');
@@ -19,19 +19,19 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            padding-top: 100px; /* Опустил чуть ниже, так как всего 2 строки */
+            padding-top: 100px;
             box-sizing: border-box;
         }
 
         .grid-container {
             display: grid;
-            /* Ровно 5 колонок одинаковой ширины */
+            /* Сетка 5 колонок */
             grid-template-columns: repeat(5, 1fr);
-            /* Отступы: 40px между строками, 10px между колонками (компактно) */
+            /* Отступы */
             gap: 40px 10px; 
             padding: 10px;
             width: 100%;
-            max-width: 600px; /* Чтобы на пк не растягивалось слишком сильно */
+            max-width: 600px;
         }
 
         .app-item {
@@ -48,7 +48,6 @@
         }
 
         .icon-box {
-            /* Уменьшил размер до 58px, чтобы влезло 5 штук в ряд на телефоне */
             width: 58px;
             height: 58px;
             display: flex;
@@ -56,8 +55,6 @@
             align-items: center;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            /* border-radius задается инлайново в HTML для каждого типа, 
-               но базовый можно задать тут, если нужно */
         }
 
         .app-item img {
@@ -68,14 +65,14 @@
 
         .app-item span {
             margin-top: 8px;
-            font-size: 10px; /* Уменьшил шрифт для плотной сетки */
+            font-size: 10px;
             color: #ccc; 
             font-weight: 500;
             text-align: center;
-            width: 64px; /* Ограничиваем ширину текста */
-            white-space: nowrap; /* Запрет переноса строк */
+            width: 64px;
+            white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis; /* Троеточие, если не влезает */
+            text-overflow: ellipsis;
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
     </style>
@@ -83,52 +80,52 @@
 <body>
 
 <div class="grid-container">
-    <a href="tinkoffbank://" class="app-item">
+    <a href="intent:#Intent;package=com.idamob.tinkoff.android;end" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="Tbank.png" style="border-radius: 18px;"></div>
         <span>Т-Банк</span>
     </a>
 
-    <a href="yandexweather://" class="app-item">
+    <a href="intent:#Intent;package=ru.yandex.weatherplugin;end" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="YandexWeather.png" style="border-radius: 18px;"></div>
         <span>Погода</span>
     </a>
 
-    <a href="yandexnavi://" class="app-item">
+    <a href="intent:#Intent;package=ru.yandex.yandexnavi;end" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="yandex_navigator.png" style="border-radius: 18px;"></div>
         <span>Навигатор</span>
     </a>
 
-    <a href="tg://resolve" class="app-item">
+    <a href="intent:#Intent;package=org.telegram.messenger;end" class="app-item">
         <div class="icon-box" style="border-radius: 50%;"><img src="telegram.png" style="border-radius: 50%;"></div>
         <span>Telegram</span>
     </a>
 
-    <a href="wildberries://" class="app-item">
+    <a href="intent:#Intent;package=com.wildberries.ru;end" class="app-item">
         <div class="icon-box" style="border-radius: 50%;"><img src="WB.png" style="border-radius: 50%;"></div>
         <span>WB</span>
     </a>
 
-    <a href="ozon://" class="app-item">
+    <a href="intent:#Intent;package=ru.ozon.app.android;end" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="ozon.png" style="border-radius: 18px;"></div>
         <span>Ozon</span>
     </a>
 
-    <a href="yandexmusic://" class="app-item">
+    <a href="intent:#Intent;package=ru.yandex.music;end" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="Yandex music.png" style="border-radius: 18px;"></div>
         <span>Музыка</span>
     </a>
 
-    <a href="dgis://" class="app-item">
+    <a href="intent:#Intent;package=ru.dublgis.dgismobile;end" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="2GIS.png" style="border-radius: 18px;"></div>
         <span>2GIS</span>
     </a>
 
-    <a href="movix://" class="app-item">
+    <a href="intent:#Intent;package=com.ertelecom.domru.tv;end" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="Movix.png" style="border-radius: 18px;"></div>
         <span>Movix</span>
     </a>
 
-    <a href="https://m.youtube.com/" class="app-item">
+    <a href="intent:#Intent;package=com.google.android.youtube;end" class="app-item">
         <div class="icon-box" style="border-radius: 18px;"><img src="YouTube.png" style="border-radius: 18px;"></div>
         <span>YouTube</span>
     </a>
